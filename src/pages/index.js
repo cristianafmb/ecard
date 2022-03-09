@@ -1,31 +1,106 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
+import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import '../sass/app.scss'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
-      <Link to="/using-dsg">Go to "Using DSG"</Link>
-    </p>
-  </Layout>
-)
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
+
+import FixedTop from '../components/fixedTop'
+import WeMakeItSimple from '../components/wemakeitsimple'
+import Marcas from '../components/marcas'
+import Form from '../components/form'
+
+const IndexPage = ({ data }) => {
+
+  const breakpoints = useBreakpoint();
+
+  return (
+    <Layout>
+
+      <Seo title="Home" />
+      <div className="bg-black">
+
+        <FixedTop data={data.globalJson.head} />
+
+        <WeMakeItSimple img={data.globalJson.wemakeitsimple.left.img} alt={data.globalJson.wemakeitsimple.left.alt} right={data.globalJson.wemakeitsimple.right} breakpoints={breakpoints} />
+
+        <div className="bg-grey pt-5 pb-5">
+          <Marcas breakpoints={breakpoints} data={data.globalJson.marcas} />
+        </div>
+
+        <div style={{ backgroundImage: `url(${data.globalJson.form.bg})` }}>
+          <Form data={data.globalJson.form} />
+        </div>
+
+
+      </div>
+
+    </Layout>
+  )
+}
 
 export default IndexPage
+
+export const IndexQuery = graphql`
+  query allHomeJson {
+    globalJson {
+      head {
+        imghoveralt
+        imghover {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        imgbackalt
+        imgback {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+      wemakeitsimple{
+        left{
+          alt
+          img{
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+        right{
+          title
+          subtitle
+          details
+        }
+      }
+      marcas{
+        title
+        line{
+          alt
+          img{
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+        marcas{
+          alt
+          img{
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+      form{
+        title
+        bg 
+        obrigatorio
+        txtbtn
+        details
+      }
+    }
+  }
+`
