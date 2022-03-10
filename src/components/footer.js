@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 function Footer({ data }) {
 
     return (
-        <div className="pt-10 m-auto width-80">
+        <div className="pt-10 m-auto width-80 pb-5">
             <Row className="mb-5">
                 <Col sm="12" md="3" lg="3">
                     <p className="grey title-medium mBlack text-uppercase mb-3 bb-orange width-70 pb-3">{data.contactos.title}</p>
