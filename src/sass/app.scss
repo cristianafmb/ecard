@@ -190,8 +190,8 @@ $grey: #707070;
 }
 
 .img-hover-top {
-    position: absolute;
-    top: 40%;
+    position: absolute !important;
+    top: 40% !important;
     left: 33%;
     width: 60vh;
     @media (max-width: 1000px) {
