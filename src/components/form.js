@@ -31,7 +31,7 @@ function Form({ data }) {
             }
 
             axios({
-                url: '',
+                url: 'https://invisual.pt/teste-form/enomac-form-contact.php',
                 method: 'post',
                 config: { headers: { 'Content-Type': 'multipart/form-data' } },
                 data: formData
@@ -117,7 +117,7 @@ function Form({ data }) {
 
             <div className='wrapper'>
                 <div >
-                    <p className="white mMedium title-medium letter-sp-5 mb-5">{data.title}</p>
+                    <p className="white mMedium title-medium letter-sp-5 mb-5 text-uppercase">{data.title}</p>
                 </div>
                 <form method="POST" onSubmit={doSubmit} action="/" id="form">
                     <Row>

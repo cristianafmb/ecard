@@ -19,14 +19,14 @@ const ArrowRight = () => {
     )
 }
 
-function Marcas({ breakpoints, data }) {
+function Marcas({ mobile, data }) {
     const image = getImage(data.line.img)
 
     return (
 
         <div className="m-auto pt-5 bg-grey pb-5">
-            <div className="m-5 center">
-                <p className="mSemiBold white title-medium letter-sp-10">{data.title}</p>
+            <div className={mobile ? "m-4 center" : "m-5 center"}>
+                <p className="mSemiBold white title-medium letter-sp-10 text-uppercase">{data.title}</p>
                 <div>
                     <GatsbyImage image={image}
                         quality={100}

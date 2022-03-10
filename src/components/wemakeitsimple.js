@@ -10,13 +10,13 @@ function WeMakeItSimple({ img, alt, right, breakpoints }) {
 
     return (
 
-        <Row className="max-width m-auto pt-5 bb-white ">
+        <Row className={mobile ? "width-80 m-auto pt-5 bb-white no-space-col-left" : "max-width m-auto pt-5 bb-white no-space-col-left"}>
             <Col lg="6" md="6" sm="12" >
                 <GatsbyImage image={image}
                     quality={100}
                     formats={["auto", "webp", "avif"]}
                     alt={alt}
-                    className={mobile ? "img-left-top bb-white center mb-5" : "img-left-top br-white center"}
+                    className={mobile ? "img-left-top bb-white center mb-5" : "img-left-top  center"}
                 />
 
             </Col>
@@ -25,8 +25,8 @@ function WeMakeItSimple({ img, alt, right, breakpoints }) {
                     <div>
                         <p className="mBoldItalic title-large white">{right.title}</p>
                     </div>
-                    <div>
-                        <p className="mBold subtitle-medium orange lh-0">{right.subtitle}</p>
+                    <div className="div-slogan-overflow">
+                        <p className="mBold title-small orange">{right.subtitle}</p>
                     </div>
 
                     {right.details.map((item, i) => (
