@@ -20,7 +20,7 @@ function FooterMobile({ data }) {
                             />
                         </Col>
                         <Col sm="10" md="10" lg="10" className="no-space-col-left col-lg-icons-text">
-                            <p className="mMedium white ">{data.contactos.email}</p>
+                            <p className="mMedium details-large white ">{data.contactos.email}</p>
                         </Col>
                     </Row>
                     <Row className="d-flex align-items-start">
@@ -34,7 +34,7 @@ function FooterMobile({ data }) {
                         </Col>
                         <Col sm="10" md="10" lg="10" className="no-space-col-left col-lg-icons-text">
                             <a href={"tel:" + data.contactos.phone} className="no-text-decoration">
-                                <p className="mMedium white ">{data.contactos.phonedisplay}</p>
+                                <p className="mMedium details-large white ">{data.contactos.phonedisplay}</p>
                             </a>
                         </Col>
                     </Row>
