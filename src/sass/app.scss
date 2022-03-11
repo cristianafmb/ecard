@@ -279,7 +279,7 @@ $grey: #707070;
     }
 }
 .title-medium {
-    font-size: calc(20px + 12 * (100vw - 769px) / 1151);
+    font-size: calc(19px + 12 * (100vw - 769px) / 1151);
     line-height: 1;
     @media (max-width: 900px) {
         font-size: calc(27px + 12 * (27vw - 769px) / 1151);
@@ -553,6 +553,38 @@ $grey: #707070;
 .display-inline-block {
     display: inline-block;
 }
+
+.cursor-pointer{
+    cursor: pointer !important;
+}
+
+/** START - MODALS **/
+.modal{
+    background-color: rgb(255,255,255,10%);
+    height: 100vh;
+    color: $white !important;
+}
+
+.modal.show .modal-dialog{
+    width: 80% !important;
+    max-width: 80% !important;
+    margin: auto;
+}
+
+.modal-header .btn-close{
+    color: $white !important;
+    background-color: white;
+    border-radius: 0;
+}
+
+.modal-content{
+    border-radius: 0;
+    background-color: $black;
+}
+
+/** END - MODALS **/
+
+
 /** START - forms **/
 .input-form {
     box-sizing: border-box;
