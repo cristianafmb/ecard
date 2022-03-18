@@ -12,8 +12,8 @@ const myCustomQueries = {
 
 module.exports = {
   siteMetadata: {
-    title: `Enomac`,
-    description: `We Make it Simple!`,
+    title: `Invisual`,
+    description: ``,
     author: `Invisual`,
     siteUrl: `https://enomac.pt/`,
   },

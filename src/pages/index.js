@@ -1,210 +1,136 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import '../sass/app.scss'
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
-import { useBreakpoint } from 'gatsby-plugin-breakpoints'
-
-import FixedTop from '../components/fixedTop'
-import WeMakeItSimple from '../components/wemakeitsimple'
-import NoMarcas from '../components/nomarcas'
-import NoMarcasMobile from '../components/nomarcasmobile'
-import Marcas from '../components/marcas'
-import Form from '../components/form'
-import Bottom from '../components/bottom'
-import BottomMobile from '../components/bottommobile'
-import Footer from '../components/footer'
-import FooterMobile from '../components/footermobile'
+import TopMobile from "../components/mobile/top"
+import Top from "../components/desktop/top"
+import SocialIconsMobile from "../components/mobile/socialicons"
+import SocialIcons from "../components/desktop/socialicons"
+import InteractMobile from "../components/mobile/interact"
+import Interact from "../components/desktop/interact"
+import Middle from "../components/desktop/middle"
 
 const IndexPage = ({ data }) => {
-
   const breakpoints = useBreakpoint();
 
+
+  const imagemobile = getImage(data.globalJson.bgmiddlemobile)
+  const image = getImage(data.globalJson.bgmiddlemobile)
   return (
     <Layout>
+      <Seo title="Nuno Carvalho" />
+      <div className="fullscreen">
+        {breakpoints.mobile ? (
+          <>
 
-      <Seo title="Home" />
-      <div className="bg-black">
+            <TopMobile data={data.globalJson.top} />
 
-        <FixedTop data={data.globalJson.head} />
+            <div style={{ height: "50vh" }}>
+              <a className="no-text-decoration" href={data.globalJson.top.site} target="_blank">
+                <GatsbyImage image={imagemobile}
+                  quality={100}
+                  formats={["auto", "webp", "avif"]}
+                  alt={data.globalJson.bgmiddlealt}
+                  objectFit="cover"
+                  style={{ height: "50vh" }}
+                />
+              </a>
 
-        <WeMakeItSimple img={data.globalJson.wemakeitsimple.left.img} alt={data.globalJson.wemakeitsimple.left.alt} right={data.globalJson.wemakeitsimple.right} breakpoints={breakpoints} />
+            </div>
 
-        <div className="bg-grey pt-5 pb-5">
-          {breakpoints.mobile ?
-            <NoMarcasMobile mobile={breakpoints.mobile} data={data.globalJson.nomarcas} />
-            :
-            <NoMarcas mobile={breakpoints.mobile} data={data.globalJson.nomarcas} />
-          }
+            <SocialIconsMobile data={data.globalJson.social} />
 
-          {/*<Marcas mobile={breakpoints.mobile} data={data.globalJson.marcas} />*/}
-        </div>
+            <InteractMobile data={data.globalJson.interact} />
 
-        <div style={{ backgroundImage: `url(${data.globalJson.form.bg})` }}>
-          <Form data={data.globalJson.form} />
-        </div>
+          </>
+        ) : (<>
+          <div className="max-width fullscreen">
+            <div className="sides max-height d-inline-flex" >
 
-        {breakpoints.mobile ?
-          <div className="bg-bottom" style={{ backgroundImage: `url(${data.globalJson.bottom.bgmobile})`, backgroundRepeat: "no-repeat" }}>
-            <BottomMobile data={data.globalJson.bottom} />
+              <SocialIcons data={data.globalJson.social} />
+
+            </div>
+            <div className="middle d-inline-flex  max-height ">
+
+              <Middle data={data.globalJson.top} bg={data.globalJson.bgmiddle} alt={data.globalJson.bgmiddlealt} />
+
+            </div>
+            <div className="sides d-inline-flex ">
+
+              <Interact data={data.globalJson.interact} />
+
+            </div>
+
           </div>
-          :
-          <div className="bg-bottom" style={{ backgroundImage: `url(${data.globalJson.bottom.bg})`, backgroundRepeat: "no-repeat" }}>
-            <Bottom data={data.globalJson.bottom} />
-          </div>
-        }
 
-        ´
-        {breakpoints.mobile ?
-          <FooterMobile data={data.globalJson.footer} />
-          :
-          <Footer data={data.globalJson.footer} />
-        }
-
-
-        <div>
-
-        </div>
-
+        </>)}
       </div>
 
     </Layout>
   )
 }
-
 export default IndexPage
 
 export const IndexQuery = graphql`
-  query allHomeJson {
+  query globalJson {
     globalJson {
-      head {
-        imghoveralt
-        imghover {
+      top{
+        img{
           childImageSharp {
             gatsbyImageData
           }
         }
-        imgbackalt
-        imgback {
+        imgdesktop{
           childImageSharp {
             gatsbyImageData
           }
         }
-      }
-      wemakeitsimple{
-        left{
-          alt
-          img{
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-        right{
-          title
-          subtitle
-          details
-        }
-      }
-      nomarcas{
-        title
-        details
-      }
-      marcas{
-        title
-        line{
-          alt
-          img{
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-        marcas{
-          alt
-          img{
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-      }
-      form{
-        title
-        bg 
-        obrigatorio
-        txtbtn
-        details
-      }
-      bottom{
-        bg
-        bgmobile
         alt
-        line
-        comercial{
-          email
-          numberdisplay
-          number
+        site
+        whatsappicon{
+          childImageSharp {
+            gatsbyImageData
+          }
         }
-        tecnico{
-          email
-          numberdisplay
-          number
+        whatsappalt
+        number
+        name
+        company
+        job
+      }
+      bgmiddlealt
+      bgmiddlemobile{
+        childImageSharp {
+          gatsbyImageData
         }
       }
-      footer{
-        contactos{
-          title
-          email
-          emailicon{
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-          emailalt
-          phonedisplay
-          phone
-          phoneicon{
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-          phonealt
+      bgmiddle{
+        childImageSharp {
+          gatsbyImageData
         }
-        siganos{
-          title
-          icons{
-            link
-            icon{
-              childImageSharp {
-                gatsbyImageData
-              }
-            }
-            alt
+      }
+      social{
+        icon{
+          childImageSharp {
+            gatsbyImageData
           }
         }
-        topright{
-          title
-          address
-          link
-        }
-        politicas{
-          title
-          link
-        }
-        copywriter
-        livroreclamacoes{
-          link
-          alt
-          icon{
-            childImageSharp {
-              gatsbyImageData
-            }
+        alt
+        link
+      }
+      interact{
+        icon{
+          childImageSharp {
+            gatsbyImageData
           }
         }
+        alt
+        text
       }
     }
   }
 `
+

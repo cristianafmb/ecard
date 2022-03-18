@@ -1,152 +1,49 @@
 {
-    "head": {
-        "imghover": "../../images/top-over.png",
-        "imghoveralt": "Enomac Top",
-        "imgback": "../../images/top-back.png",
-        "imgbackalt": "Enomac Back"
+    "top": {
+        "img":"../../images/person.jpg",
+        "imgdesktop":"../../images/person_desktop.jpg",
+        "alt": "Nuno Carvalho",
+        "site": "https://invisual.pt",
+        "whatsappicon": "../../images/whatsapp-icon.png",
+        "whatsappalt": "Icon Whatsapp",
+        "number": "+351918412151",
+        "name": "Nuno Carvalho",
+        "company": "INVISUAL Branding Solutions",
+        "job": "Founder & CEO"
     },
-    "wemakeitsimple": {
-        "left": {
-            "img": "../../images/img1.png",
-            "alt": "Machine"
+    "bgmiddle": "../../images/logo_branco.png",
+    "bgmiddlemobile": "../../images/logo_preto.jpg",
+    "bgmiddlealt": "Logo",
+    "social":[
+        {
+            "icon": "../../images/facebook.png",
+            "alt":"Facebook",
+            "link": "https://pt-br.facebook.com/invisualbrandingsolutions/"
         },
-        "right": {
-            "title": "We Make it Simple!",
-            "subtitle": "for pressing, bottling, labeling, coding, packaging, palletizing",
-            "details": [
-                "Fundada a 26 de fevereiro de 2018, por Sérgio Queirós, a ENOMAC é uma empresa que se dedica à montagem e comercialização de máquinas e equipamentos industriais.",
-                "Com 22 anos de experiência na área da mecânica industrial, nos quais foi conquistando e consolidando o seu conhecimento no setor, o CEO da ENOMAC afirma que o principal objetivo da empresa é responder, de forma eficiente, às necessidades dos seus clientes e parceiros.",
-                "A ENOMAC fornece equipamentos inovadores, com padrões de montagem de elevada qualidade, a preços competitivos, garantindo, deste modo, que os seus parceiros conseguem responder às maiores exigências do mercado."
-            ]
+        {
+            "icon": "../../images/instagram.png",
+            "alt":"Instagram",
+            "link": "https://www.instagram.com/invisualbrandingsolutions/"
+        },
+        {
+            "icon": "../../images/invisual.png",
+            "alt":"Site",
+            "link": "https://invisual.pt"
+        },
+        {
+            "icon": "../../images/email.png",
+            "alt":"Email",
+            "link": "mailto:nuno.carvalho@invisual.pt"
+        },
+        {
+            "icon": "../../images/linkedin.png",
+            "alt":"LinkedIn",
+            "link": "https://www.linkedin.com/company/invisual-branding-solutions/"
         }
-    },
-    "nomarcas":{
-        "title": "WE MAKE IT SIMPLE",
-        "details": "for pressing, bottling, labeling, coding, packaging, palletizing"
-    },
-    "marcas": {
-        "title": "marcas representadas",
-        "line": {
-            "img": "../../images/orange-line.png",
-            "alt": "Linha"
-        },
-        "marcas": [
-            {
-                "img": "../../images/sotavinhos.png",
-                "alt": "SOTAVINHOS"
-            },
-            {
-                "img": "../../images/porto-ferreira.png",
-                "alt": "Ferreira Porto"
-            },
-            {
-                "img": "../../images/bacalhoa.png",
-                "alt": "Bacalhoa"
-            },
-            {
-                "img": "../../images/pacheca.png",
-                "alt": "Quinta da Pacheca"
-            }
-        ]
-    },
-    "form": {
-        "title": "CONTACTO-NOS",
-        "bg": "../images/bg-form.png",
-        "obrigatorio": "* CAMPOS DE PREENCHIMENTO OBRIGATÓRIO",
-        "details": "Este formulário de contacto corresponde ao procedimento normal de envio de email diretamente para a nossa caixa de correio. Os seus dados não são armazenados nem utilizados para qualquer outro fim.",
-        "txtbtn": "ENVIAR MENSAGEM"
-    },
-    "bottom": {
-        "bg": "../images/bg-bottom.png",
-        "bgmobile": "../images/bg-bottom-mobile.jpg",
-        "alt": "Enomac",
-        "line": "../images/mini-orange-line.png",
-        "comercial": [
-            {
-                "email": "info@enomac.pt",
-                "numberdisplay": "+351 961 366 610",
-                "number": "+351961366610"
-            }
-        ],
-        "tecnico": [
-            {
-              
-                "email": "sat@enomac.pt",
-                "numberdisplay": "+351 234 726 253",
-                "number": "+351234726253"
-            },
-            {
-                
-                "email": "tecnico@enomac.pt",
-                "numberdisplay": "+351 234 726 253",
-                "number": "+351234726253"
-            }
-        ]
-    },
-    "footer": {
-    
-        "contactos": {
-            "title": "contactos",
-            "email": "geral@enomac.pt",
-            "emailicon": "../../images/email.png",
-            "emailalt": "Email",
-            "phonedisplay": "+351 234 726 253",
-            "phone": "+351234726253",
-            "phoneicon": "../../images/phone.png",
-            "phonealt": "Phone"
-        },
-        "siganos": {
-            "title": "SIGA-NOS",
-            "icons": [
-                {
-                    "link": "",
-                    "icon": "../../images/facebook.png",
-                    "alt": "Facebook"
-                },
-                {
-                    "link": "",
-                    "icon": "../../images/insta.png",
-                    "alt": "Instagram"
-                },
-                {
-                    "link": "",
-                    "icon": "../../images/linkedin.png",
-                    "alt": "Linkedin"
-                },
-                {
-                    "link": "",
-                    "icon": "../../images/youtube.png",
-                    "alt": "Youtube"
-                }
-            ]
-        },
-        "topright":{
-            "title": "ENOMAC, LDA",
-            "address":[
-                "AV. DA ESTAÇÃO, LT. 2, FRAÇÃO C",
-                "ZONA INDUSTRIAL DE OIÃ, 3770-059 OIÃ",
-                "AVEIRO, PORTUGAL"
-            ],
-            "link": "https://www.google.com/maps/uv?pb=!1s0xd23a72fadb5bbaf%3A0xc7ef79298be3c359!3m1!7e115!4s%2Fmaps%2Fplace%2Fenomac%2Blda%2F%4040.5545216%2C-8.5563557%2C3a%2C75y%2C255.84h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sWxfDQVAaWR4MrAl7QEhoLg*212e0*214m2*213m1*211s0xd23a72fadb5bbaf%3A0xc7ef79298be3c359%3Fsa%3DX!5senomac%20lda%20-%20Pesquisa%20Google!15sCgIgAQ&imagekey=!1e2!2sWxfDQVAaWR4MrAl7QEhoLg&hl=pt-PT&sa=X&ved=2ahUKEwj-8N29vLv2AhXSz4UKHZxlDT4Qpx96BAgqEAg"
-        },
-        "politicas": [
-            {
-                "title": "POLÍTICA DE PRIVACIDADE",
-                "link": ""
-            },
-            {
-                "title": "POLÍTICA DE COOKIES",
-                "link": ""
-            }
-        ],
-        "copywriter":[
-            "COPYRIGHT 2021  |  ENOMAC, LDA",
-            "CREATED: INVISUAL.PT"
-        ],
-        "livroreclamacoes": {
-            "link" :"https://www.livroreclamacoes.pt/Inicio/",
-            "icon": "../../images/reclamacoes.png",
-            "alt": "Livro de Reclamaçõe"
-        }
+    ],
+    "interact":{
+        "icon": "../../images/touch.png",
+        "alt":"Touch",
+        "text": "Clique nos icons para interagir"
     }
 }
