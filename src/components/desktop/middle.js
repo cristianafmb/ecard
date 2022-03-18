@@ -2,6 +2,8 @@ import * as React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Row, Col } from 'react-bootstrap'
 
+import '../../sass/app.scss'
+
 const Middle = ({ data, alt, bg }) => {
   const imagebg = getImage(bg)
   const imageperson = getImage(data.imgdesktop)

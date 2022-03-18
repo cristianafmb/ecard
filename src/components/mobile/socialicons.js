@@ -1,6 +1,8 @@
 import * as React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+import '../../sass/app.scss'
+
 const SocialIcons = ({ data }) => {
   return (
     <div className="max-width mt-4">

@@ -1,8 +1,7 @@
 import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
-import { Row, Col } from 'react-bootstrap'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+import '../../sass/app.scss'
 
 const Interact = ({ data }) => {
   const image = getImage(data.icon)

@@ -1,6 +1,8 @@
 import * as React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+import '../../sass/app.scss'
+
 const Interact = ({ data }) => {
   const image = getImage(data.icon)
   return (

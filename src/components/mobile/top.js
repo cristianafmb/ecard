@@ -2,6 +2,8 @@ import * as React from "react"
 import { Row, Col } from 'react-bootstrap'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+import '../../sass/app.scss'
+
 const Top = ({ data }) => {
   const image = getImage(data.img)
   const whats = getImage(data.whatsappicon)
