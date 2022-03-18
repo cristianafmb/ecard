@@ -16,9 +16,8 @@ import Middle from "../components/desktop/middle"
 const IndexPage = ({ data }) => {
   const breakpoints = useBreakpoint();
 
-
   const imagemobile = getImage(data.globalJson.bgmiddlemobile)
-  const image = getImage(data.globalJson.bgmiddlemobile)
+  
   return (
     <Layout>
       <Seo title="Nuno Carvalho" />
@@ -50,7 +49,7 @@ const IndexPage = ({ data }) => {
           <div className="max-width fullscreen">
             <div className="sides max-height d-inline-flex" >
 
-              <SocialIcons data={data.globalJson.social} />
+              <SocialIcons data={data.globalJson.social} breakpoints={breakpoints}/>
 
             </div>
             <div className="middle d-inline-flex  max-height ">
@@ -114,6 +113,11 @@ export const IndexQuery = graphql`
       }
       social{
         icon{
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        iconbig{
           childImageSharp {
             gatsbyImageData
           }

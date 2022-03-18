@@ -17,26 +17,31 @@
     "social":[
         {
             "icon": "../../images/facebook.png",
+            "iconbig": "../../images/facebook-big.png",
             "alt":"Facebook",
             "link": "https://pt-br.facebook.com/invisualbrandingsolutions/"
         },
         {
             "icon": "../../images/instagram.png",
+            "iconbig": "../../images/instagram-big.png",
             "alt":"Instagram",
             "link": "https://www.instagram.com/invisualbrandingsolutions/"
         },
         {
             "icon": "../../images/invisual.png",
+            "iconbig": "../../images/invisual-big.png",
             "alt":"Site",
             "link": "https://invisual.pt"
         },
         {
             "icon": "../../images/email.png",
+            "iconbig": "../../images/email-big.png",
             "alt":"Email",
             "link": "mailto:nuno.carvalho@invisual.pt"
         },
         {
             "icon": "../../images/linkedin.png",
+            "iconbig": "../../images/linkedin-big.png",
             "alt":"LinkedIn",
             "link": "https://www.linkedin.com/company/invisual-branding-solutions/"
         }
