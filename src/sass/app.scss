@@ -218,3 +218,9 @@
         min-width: 100%;
     }
 }
+
+.img-social{
+    @media (min-width: 1150px){
+        width: 12vh;
+    }
+}
