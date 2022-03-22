@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-
+      <meta name="og:image" content="https://nuno-carvalho.invisual.pt/static/593c2474305d8181790a506d9a6a095d/69e8d/logo_preto.webp" itemprop="image" />
       <div>
         <main>{children}</main>
 

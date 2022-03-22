@@ -45,25 +45,7 @@ const IndexPage = ({ data }) => {
 
           </>
         ) : (<>
-          <div className="max-width fullscreen">
-            <div className="sides max-height d-inline-flex" >
-
-              <SocialIcons data={data.globalJson.social} breakpoints={breakpoints}/>
-
-            </div>
-            <div className="middle d-inline-flex  max-height ">
-
-              <Middle data={data.globalJson.top} bg={data.globalJson.bgmiddle} alt={data.globalJson.bgmiddlealt} />
-
-            </div>
-            <div className="sides d-inline-flex ">
-
-              <Interact data={data.globalJson.interact} />
-
-            </div>
-
-          </div>
-
+          WAITING
         </>)}
       </div>
 
