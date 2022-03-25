@@ -51,7 +51,10 @@ const StyledSocialIconsMobile = styled.div`
     text-decoration: none !important;
 }
 .Instagram{
-    margin-right: 16%;
+  margin-right: 10%;
+}
+.Facebook{
+  margin-left: 13%;
 }
 .full-height {
     min-height: 100%;

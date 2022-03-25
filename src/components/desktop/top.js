@@ -1,46 +1,110 @@
 import * as React from "react"
-import { Row, Col } from 'react-bootstrap'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const Top = ({ data }) => {
-  const image = getImage(data.img)
-  const whats = getImage(data.whatsappicon)
-  return (
-    <Row className="max-width row-top">
-      <Col sm="6" md="6" lg="6" className="width-50 full-height position-relative">
-        <div className="full-height">
-          <GatsbyImage image={image}
-            quality={100}
-            formats={["auto", "webp", "avif"]}
-            alt={data.alt}
-            objectFit="cover"
-            objectPosition="50% 50%"
-            className="full-height position-absolute img-person"
-          />
-        </div>
+import styled from "styled-components"
 
-      </Col>
-      <Col sm="6" md="6" lg="6" className="width-50  position-relative">
-        <div className="div-whats pe-15 position-absolute pb-3 right">
-          <a className="no-text-decoration" href={"https://api.whatsapp.com/send?phone="+data.number}>
-            <GatsbyImage image={whats}
+
+const Top = ({ data }) => {
+  const image = getImage(data.imgdesktop)
+  const emailicon = getImage(data.emailicon)
+
+  return (
+    <StyledTop style={{ height: "100%", maxHeight: "100%" }}>
+      <div className="half-width max-h column" >
+        <GatsbyImage image={image}
+          quality={100}
+          formats={["auto", "webp", "avif"]}
+          alt={data.alt}
+          objectFit="contain"
+          objectPosition="50% 50%"
+          className="max-h width-95"
+          imgStyle={{ objectFit: "contain", objectPosition: 'right' }}
+        />
+      </div>
+      <div className="half-width max-h column" >
+        <div className="div-contacts max-width m-auto">
+          <a className="no-text-decoration max-width" href={data.email} target="_blank">
+            <GatsbyImage image={emailicon}
               quality={100}
               formats={["auto", "webp", "avif"]}
-              alt={data.whatsappalt}
-              objectFit="cover"
-              objectPosition="0% -110%"
-              className="img-whats mb-2"
+              alt="email"
+              objectFit="contain"
+              className="width-10 img-email"
+              imgStyle={{ zIndex: "80", objectFit: "contain", objectPosition: 'right' }}
             />
 
           </a>
-
-          <p className="vRegular title-large mb-1">{data.name}</p>
-          <p className="vSemiBold mb-0 details-small">{data.company}</p>
-          <p className="vRegular details-small mb-0">{data.job}</p>
+          <div className="m-auto center max-width">
+            <div className=" max-width right div-p">
+              <p className="vRegular title-large mb-1 mt-3">{data.name}</p>
+              <p className="vSemiBold mb-0 details-small">{data.company}</p>
+              <p className="vRegular details-x-small mb-0">{data.job}</p>
+            </div>
+          </div>
         </div>
-      </Col>
-    </Row>
+
+      </div>
+    </StyledTop >
   )
 }
 
 export default Top
+
+const StyledTop = styled.div`
+.div-p{
+  margin: auto;
+  padding-right: 45%;
+  margin-bottom: 2%;
+}
+.m-auto{
+  margin: auto;
+}
+.right{
+  text-align: right
+}
+.max-width{
+  width: 100%;
+}
+.width-95{
+  width: 95%
+}
+.width-70{
+  width: 70%
+}
+.width-10{
+  width: 10%;
+}
+.center{
+  text-align: center !important;
+}
+.img-email{
+  display: block;
+  margin: auto;
+  vertical-align: middle;
+}
+.half-width {
+  width: 50%;
+}
+.max-h{
+  height: 100% !important;
+  max-height: 100% !important;
+}
+.column{
+  display: inline-flex;
+}
+.no-text-decoration{
+  text-decoration: none !important;
+}
+.div-contacts{
+
+}
+.title-large{
+  font-size: 1.6vw;
+}
+.details-x-small{
+  font-size: calc(9px + 6 * (100vw - 320px) / 680);
+}
+.details-small {
+  font-size: calc(11px + 6 * ((100vw - 320px) / 680));
+}
+`

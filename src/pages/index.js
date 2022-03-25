@@ -1,22 +1,22 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TopMobile from "../components/mobile/top"
+import Top from "../components/desktop/top"
 import SocialIconsMobile from "../components/mobile/socialicons"
 import SocialIcons from "../components/desktop/socialicons"
 import InteractMobile from "../components/mobile/interact"
-import Interact from "../components/desktop/interact"
-import Middle from "../components/desktop/middle"
+
 
 const IndexPage = ({ data }) => {
   const breakpoints = useBreakpoint();
 
   const imagemobile = getImage(data.globalJson.bgmiddlemobile)
-  
+
   return (
     <Layout>
       <Seo title="Nuno Carvalho" />
@@ -45,8 +45,27 @@ const IndexPage = ({ data }) => {
 
           </>
         ) : (<>
-          WAITING
-        </>)}
+
+          <div style={{ height: "84.1%", maxHeight: "84.1%" }}>
+            <div style={{ height: "45.9%", maxHeight: "45.9%" }}>
+              <Top data={data.globalJson.top} />
+            </div>
+            <Link to={data.globalJson.top.site} target="_blank" style={{ height: "54.1%", maxHeight: "54.1%"}}>
+              <div style={{ height: "54.1%", maxHeight: "54.1%", backgroundImage: `url(${data.globalJson.bgmiddle})`, backgroundSize: "cover", backgroundPosition: "center" }} >
+
+
+              </div>
+            </Link>
+
+          </div>
+
+          <div style={{ height: "15.9%", maxHeight: "15.9% " }}>
+            <SocialIcons data={data.globalJson} breakpoints={breakpoints} />
+          </div>
+
+
+        </>
+        )}
       </div>
 
     </Layout>
@@ -77,6 +96,12 @@ export const IndexQuery = graphql`
         }
         whatsappalt
         number
+        emailicon{
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        email
         name
         company
         job
@@ -87,11 +112,7 @@ export const IndexQuery = graphql`
           gatsbyImageData
         }
       }
-      bgmiddle{
-        childImageSharp {
-          gatsbyImageData
-        }
-      }
+      bgmiddle
       social{
         icon{
           childImageSharp {
@@ -115,7 +136,15 @@ export const IndexQuery = graphql`
         alt
         text
       }
+      socialdesk{
+        icon{
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        alt
+        link
+      }
     }
   }
 `
-

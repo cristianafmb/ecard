@@ -1,47 +1,49 @@
 {
     "top": {
         "img":"../../images/person.jpg",
-        "imgdesktop":"../../images/person_desktop.jpg",
+        "imgdesktop":"../../images/person_desk.jpg",
         "alt": "Nuno Carvalho",
         "site": "https://invisual.pt",
         "whatsappicon": "../../images/whatsapp-icon.png",
         "whatsappalt": "Icon Whatsapp",
         "number": "+351918412151",
+        "emailicon": "../../images/email-desk.png",
+        "email": "mailto:nuno.carvalho@invisual.pt",
         "name": "Nuno Carvalho",
         "company": "INVISUAL Branding Solutions",
         "job": "Founder & CEO"
     },
-    "bgmiddle": "../../images/logo_branco.png",
+    "bgmiddle": "../images/logo_preto-desk.png",
     "bgmiddlemobile": "../../images/logo_preto.jpg",
     "bgmiddlealt": "Logo",
     "social":[
         {
             "icon": "../../images/facebook.png",
-            "iconbig": "../../images/facebook-big.png",
+            "iconbig": "../../images/facebook-desk.png",
             "alt":"Facebook",
             "link": "https://pt-br.facebook.com/invisualbrandingsolutions/"
         },
         {
             "icon": "../../images/instagram.png",
-            "iconbig": "../../images/instagram-big.png",
+            "iconbig": "../../images/instagram-desk.png",
             "alt":"Instagram",
             "link": "https://www.instagram.com/invisualbrandingsolutions/"
         },
         {
             "icon": "../../images/invisual.png",
-            "iconbig": "../../images/invisual-big.png",
+            "iconbig": "../../images/invisual-desk.png",
             "alt":"Site",
             "link": "https://invisual.pt"
         },
         {
             "icon": "../../images/email.png",
-            "iconbig": "../../images/email-big.png",
+            "iconbig": "../../images/email-desk.png",
             "alt":"Email",
             "link": "mailto:nuno.carvalho@invisual.pt"
         },
         {
             "icon": "../../images/linkedin.png",
-            "iconbig": "../../images/linkedin-big.png",
+            "iconbig": "../../images/linkedin-desk.png",
             "alt":"LinkedIn",
             "link": "https://www.linkedin.com/company/invisual-branding-solutions/"
         }
@@ -50,5 +52,37 @@
         "icon": "../../images/touch.png",
         "alt":"Touch",
         "text": "Clique nos icons para interagir"
-    }
+    },
+    "socialdesk": [
+        {
+            "icon": "../../images/invisual-desk.png",
+            "link": "https://invisual.pt",
+            "alt": "Invisual"
+        },
+        {
+            "icon": "../../images/facebook-desk.png",
+            "link": "https://pt-br.facebook.com/invisualbrandingsolutions/",
+            "alt": "Facebook"
+        },
+        {
+            "icon": "../../images/instagram-desk.png",
+            "link": "https://www.instagram.com/invisualbrandingsolutions/",
+            "alt": "Instagram"
+        },
+        {
+            "icon": "../../images/linkedin-desk.png",
+            "link": "https://www.linkedin.com/company/invisual-branding-solutions/",
+            "alt": "Linkedin"
+        },
+        {
+            "icon": "../../images/whastapp-icon-desk.png",
+            "link": "https://api.whatsapp.com/send?phone=+351918412151",
+            "alt": "Whatsapp"
+        },
+        {
+            "icon": "../../images/touch-text-desk.png",
+            "link": "#",
+            "alt": "Touch"
+        }
+    ]
 }
