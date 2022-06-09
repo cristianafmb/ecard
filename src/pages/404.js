@@ -23,9 +23,7 @@ const NotFoundPage = ({ data }) => {
       <div className="fullscreen">
         {breakpoints.mobile ? (
           <>
-
             <TopMobile data={data.globalJson.top} />
-
             <div style={{ height: "50vh" }}>
               <a className="no-text-decoration" href={data.globalJson.top.site} target="_blank">
                 <GatsbyImage image={imagemobile}

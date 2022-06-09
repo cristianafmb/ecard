@@ -7,6 +7,8 @@
         "whatsappicon": "../../images/whatsapp-icon.png",
         "whatsappalt": "Icon Whatsapp",
         "number": "+351918412151",
+        "telicon": "../../images/tel.png",
+        "telalt": "Icon Whatsapp",
         "emailicon": "../../images/email-desk.png",
         "email": "mailto:nuno.carvalho@invisual.pt",
         "name": "Nuno Carvalho",
@@ -73,6 +75,11 @@
             "icon": "../../images/linkedin-desk.png",
             "link": "https://www.linkedin.com/company/invisual-branding-solutions/",
             "alt": "Linkedin"
+        },
+        {
+            "icon": "../../images/tel-desk.png",
+            "link": "tel:+351918412151",
+            "alt": "Tel"
         },
         {
             "icon": "../../images/whastapp-icon-desk.png",

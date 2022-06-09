@@ -7,6 +7,7 @@ import styled from "styled-components"
 const Top = ({ data }) => {
   const image = getImage(data.img)
   const whats = getImage(data.whatsappicon)
+  const tel = getImage(data.telicon)
   return (
     <StyledSocialIconsMobile>
       <Row className="max-width row-top">
@@ -25,6 +26,17 @@ const Top = ({ data }) => {
         </Col>
         <Col sm="6" md="6" lg="6" className="width-50  position-relative right">
           <div className="div-whats pe-15 position-absolute pb-3 right">
+            <a className="no-text-decoration" href={"tel:"+data.number} target="_blank">
+              <GatsbyImage image={tel}
+                quality={100}
+                formats={["auto", "webp", "avif"]}
+                alt={data.telalt}
+                objectFit="cover"
+                objectPosition="0% -110%"
+                className="img-tel mb-2"
+              />
+            </a>
+
             <a className="no-text-decoration" href={"https://api.whatsapp.com/send?phone=" + data.number} target="_blank">
               <GatsbyImage image={whats}
                 quality={100}

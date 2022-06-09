@@ -11,7 +11,7 @@ const SocialIcons = ({ data, breakpoints }) => {
   const length = data.socialdesk.length
   console.log(data.socialdesk)
   return (
-    <StyledSocialIcons className="width-55 m-auto max-height">
+    <StyledSocialIcons className="width-65 m-auto max-height">
 
       {data.socialdesk.map((social, l) => (
         <div className={l !== 0 ? (l !== (length - 1) ? "width-10 max-height d-inline-block center m-auto" : "width-40 max-height d-inline-block center m-auto") : "width-20 max-height d-inline-block center m-auto"} >
@@ -46,10 +46,10 @@ const StyledSocialIcons = styled.div`
   height: 100% !important;
 }
 .width-10{
-  width: 10%;
+  width: 9%;
 }
 .width-40{
-  width: 40%;
+  width: 35%;
 }
 .width-20{
   width: 20% !important;
@@ -88,5 +88,8 @@ const StyledSocialIcons = styled.div`
 }
 .Touch{
   max-width: 85%
+}
+.Tel{
+  max-width: 40%;
 }
 `

@@ -96,6 +96,12 @@ export const IndexQuery = graphql`
         }
         whatsappalt
         number
+        telalt
+        telicon{
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
         emailicon{
           childImageSharp {
             gatsbyImageData
